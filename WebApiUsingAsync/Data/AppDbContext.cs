@@ -3,12 +3,12 @@ using WebApiUsingAsync.Models;
 
 namespace WebApiUsingAsync.Data
 {
-    public class AppDbContext : AppDbContext
+    public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
 
-        public DbSet<ToDo> TodoItems { get; set; }
+        public DbSet<ToDo> ToDos { get; set; }
     }
 }
